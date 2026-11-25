@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vel Properties | Premium Homes, Plots & Commercial Spaces</title>
+<meta name="description" content="Vel Properties - premium villas, apartments, plots and commercial spaces in Coimbatore, Tamil Nadu.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'%3E%3Ccircle cx='40' cy='40' r='39' fill='%23061a17'/%3E%3Ccircle cx='40' cy='40' r='36' fill='none' stroke='%23c9a45c' stroke-width='2'/%3E%3Cpolygon points='19,25 27,25 40,47 53,25 61,25 44,59 36,59' fill='%23c9a45c'/%3E%3Cpath d='M40 9 C47 17 47 27 40 36 C33 27 33 17 40 9Z' fill='%23f3dfa6'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --deep:#061a17;--emerald:#0a2622;--emerald2:#0f3a33;--gold:#c9a45c;--gold-l:#f3dfa6;--gold-d:#8f6b2a;
+  --gold-grad:linear-gradient(135deg,#f3dfa6 0%,#c9a45c 50%,#8f6b2a 100%);
+  --ivory:#f7f3ea;--ink:#16221f;--muted:#5f6e6a;
+  --serif:'Cormorant Garamond','Playfair Display',Georgia,serif;
+  --sans:'Inter','Segoe UI',system-ui,-apple-system,Roboto,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+body{font-family:var(--sans);color:var(--ink);background:#fff;line-height:1.65;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.container{width:min(1180px,92%);margin:0 auto}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.1}
+.logo{display:block;width:100%;height:100%}
+
+/* ---------- Cinematic loader (curtains) ---------- */
+.curtain{position:fixed;left:0;right:0;height:50vh;background:var(--deep);z-index:9998}
+.curtain.top{top:0}.curtain.bottom{bottom:0}
+.ld-inner{position:fixed;inset:0;z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;color:#fff}
+.ld-inner .logo-wrap{width:96px;height:96px;animation:pulse 1.6s ease-in-out infinite}
+.ld-inner b{font-family:var(--serif);font-size:1.8rem;letter-spacing:10px;background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.ld-bar{width:180px;height:2px;background:rgba(201,164,92,.25);overflow:hidden}
+.ld-bar i{display:block;height:100%;background:var(--gold-grad);transform:scaleX(0);transform-origin:left}
+@keyframes pulse{50%{transform:scale(1.07);filter:drop-shadow(0 0 18px rgba(201,164,92,.5))}}
+
+/* ---------- Header ---------- */
+header{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .4s,padding .4s,box-shadow .4s;padding:14px 0}
+header.scrolled{background:rgba(6,26,23,.92);backdrop-filter:blur(10px);box-shadow:0 1px 0 rgba(201,164,92,.3);padding:8px 0}
+.nav{display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:14px;color:#fff}
+.brand .logo-wrap{width:50px;height:50px;filter:drop-shadow(0 2px 8px rgba(0,0,0,.45))}
+.brand b{display:block;font-family:var(--serif);font-size:1.7rem;letter-spacing:6px;font-weight:700;line-height:1;background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.brand small{display:block;font-size:.6rem;letter-spacing:7px;color:#e9dcc0;text-transform:uppercase;margin-top:4px}
+nav ul{display:flex;gap:30px;list-style:none}
+nav a{color:#e8efec;font-size:.76rem;letter-spacing:2px;text-transform:uppercase;position:relative;padding:4px 0}
+nav a::after{content:"";position:absolute;left:0;bottom:-2px;height:1px;width:0;background:var(--gold);transition:.35s}
+nav a:hover{color:var(--gold-l)}nav a:hover::after{width:100%}
+.menu-btn{display:none;background:none;border:0;color:#fff;font-size:1.7rem;cursor:pointer}
+
+/* ---------- Buttons ---------- */
+.btn{display:inline-block;padding:14px 32px;border-radius:3px;font-weight:600;border:1px solid var(--gold);cursor:pointer;font-size:.78rem;letter-spacing:2px;text-transform:uppercase;font-family:var(--sans);transition:filter .3s,background .3s}
+.btn.primary{background:var(--gold-grad);border-color:transparent;color:var(--emerald)}
+.btn.primary:hover{filter:brightness(1.1)}
+.btn.ghost{color:#fff;background:transparent;margin-left:12px}
+.btn.ghost:hover{background:rgba(201,164,92,.15)}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;min-height:100vh;color:#fff;background:var(--deep);overflow:hidden;display:flex;align-items:center;padding:120px 0 150px;isolation:isolate}
+.hero-bg{position:absolute;inset:-6% -3%;z-index:-4;will-change:transform}
+.hero-bg img{width:100%;height:100%;object-fit:cover;filter:saturate(.9) contrast(1.05)}
+.hero-bg img.broken{display:none}
+.hero::before{content:"";position:absolute;inset:0;z-index:-3;background:
+  radial-gradient(circle at 80% 25%,rgba(201,164,92,.22),transparent 45%),
+  linear-gradient(100deg,rgba(6,26,23,.96) 8%,rgba(6,26,23,.78) 48%,rgba(6,26,23,.45) 100%)}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;box-shadow:inset 0 0 220px 60px rgba(0,0,0,.75)}
+.grain{position:absolute;inset:-50%;z-index:-1;pointer-events:none;opacity:.09;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");animation:grain 1s steps(6) infinite}
+@keyframes grain{0%{transform:translate(0,0)}20%{transform:translate(-3%,2%)}40%{transform:translate(2%,-3%)}60%{transform:translate(-2%,-1%)}80%{transform:translate(3%,3%)}100%{transform:translate(0,0)}}
+.bar-cine{position:absolute;left:0;right:0;height:5.5vh;background:#000;z-index:3;pointer-events:none}
+.bar-cine.t{top:0}.bar-cine.b{bottom:0}
+.sky{position:absolute;left:-5%;width:110%;bottom:0;z-index:-2;pointer-events:none;will-change:transform}
+.sky svg{display:block;width:100%;height:auto}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center;position:relative;z-index:2}
+.kicker{color:var(--gold);text-transform:uppercase;letter-spacing:6px;font-size:.74rem;font-weight:600}
+.hero h1{font-size:clamp(2.5rem,5.6vw,4.4rem);margin:18px 0 22px;font-weight:600}
+.hero h1 .w{display:inline-block;overflow:hidden;vertical-align:top;padding:0 .06em .08em 0;margin-right:.14em}
+.hero h1 .w i{display:inline-block;font-style:normal;will-change:transform}
+.hero h1 .gold i{background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent;font-style:italic;padding-right:.05em}
+.hero .sub{max-width:520px;color:#cfdcd8;font-size:1.05rem;margin-bottom:34px}
+.hero-3d-wrap{position:relative}
+.hero-3d{width:100%;height:440px;position:relative;cursor:grab}
+.hero-3d canvas{width:100%!important;height:100%!important;display:block}
+.hero-3d-label{position:absolute;left:50%;bottom:-4px;transform:translateX(-50%);font-size:.65rem;letter-spacing:4px;text-transform:uppercase;color:rgba(243,223,166,.7);white-space:nowrap}
+.hero-lottie{position:absolute;right:2%;top:-6%;width:120px;height:120px;border-radius:50%;background:rgba(6,26,23,.55);border:1px solid rgba(201,164,92,.4);backdrop-filter:blur(6px);display:grid;place-items:center}
+.hero-lottie>div{width:92px;height:92px}
+.scroll-hint{position:absolute;left:50%;bottom:92px;transform:translateX(-50%);z-index:4;display:flex;flex-direction:column;align-items:center;gap:8px;font-size:.62rem;letter-spacing:4px;text-transform:uppercase;color:#c9d6d2}
+.scroll-hint i{width:1px;height:42px;background:linear-gradient(var(--gold),transparent);animation:drip 1.8s ease-in-out infinite;transform-origin:top}
+@keyframes drip{0%{transform:scaleY(0)}50%{transform:scaleY(1)}100%{transform:scaleY(1);opacity:0}}
+
+/* Stats */
+.stats{margin-top:-64px;position:relative;z-index:6}
+.stats .grid{background:#fff;border-radius:6px;box-shadow:0 20px 60px rgba(6,26,23,.22);display:grid;grid-template-columns:repeat(4,1fr);padding:30px 10px;text-align:center;border-top:2px solid var(--gold)}
+.stat strong{font-family:var(--serif);font-size:2.7rem;color:var(--emerald2);display:block;line-height:1.1}
+.stat span{color:var(--muted);font-size:.78rem;letter-spacing:2px;text-transform:uppercase}
+
+/* ---------- Sections ---------- */
+section{padding:110px 0}
+.sec-head{margin-bottom:40px}
+.sec-head .kicker{display:block}
+h2{font-size:clamp(2rem,4vw,3rem);color:var(--emerald);margin:8px 0 14px}
+h2::after{content:"";display:block;width:60px;height:2px;background:var(--gold-grad);margin-top:14px}
+.lead{color:var(--muted);max-width:640px}
+.alt{background:var(--ivory)}
+
+/* smooth reveal */
+.rv{opacity:0;transform:translateY(46px);filter:blur(8px);transition:opacity 1.1s cubic-bezier(.2,.7,.2,1),transform 1.1s cubic-bezier(.2,.7,.2,1),filter 1.1s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.rv.in{opacity:1;transform:none;filter:none}
+.rv-img{clip-path:inset(0 0 100% 0);transition:clip-path 1.4s cubic-bezier(.77,0,.18,1);transition-delay:var(--d,0s)}
+.rv-img.in{clip-path:inset(0 0 0 0)}
+.no-js .rv,.no-js .rv-img{opacity:1;transform:none;filter:none;clip-path:none}
+
+/* Projects */
+.filters{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 34px}
+.filters button{padding:9px 24px;border-radius:3px;border:1px solid #d6ddd9;background:#fff;cursor:pointer;font:500 .78rem var(--sans);letter-spacing:2px;text-transform:uppercase;color:var(--ink);transition:.3s}
+.filters button.active,.filters button:hover{background:var(--emerald2);color:#fff;border-color:var(--emerald2)}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:30px}
+.pcard{perspective:900px}
+.pcard-in{background:#fff;border-radius:6px;overflow:hidden;box-shadow:0 10px 34px rgba(6,26,23,.12);transition:box-shadow .4s;cursor:pointer;transform-style:preserve-3d;will-change:transform}
+.pcard-in:hover{box-shadow:0 26px 60px rgba(6,26,23,.28)}
+.pimg{position:relative;height:250px;overflow:hidden;background:linear-gradient(135deg,var(--emerald2),var(--deep))}
+.pimg img{position:absolute;left:0;top:-8%;width:100%;height:116%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.pimg img.broken{display:none}
+.pcard-in:hover .pimg img{transform:scale(1.07)}
+.pimg::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(6,26,23,.55),transparent 55%)}
+.tag{position:absolute;top:16px;left:16px;z-index:2;background:var(--gold-grad);color:var(--emerald);font-size:.66rem;font-weight:700;padding:5px 14px;border-radius:2px;text-transform:uppercase;letter-spacing:2px}
+.view{position:absolute;right:16px;bottom:14px;z-index:2;color:#fff;font-size:.68rem;letter-spacing:3px;text-transform:uppercase;opacity:0;transform:translateY(10px);transition:.4s}
+.pcard-in:hover .view{opacity:1;transform:none}
+.pbody{padding:24px}
+.pbody h3{font-size:1.55rem;color:var(--emerald)}
+.loc{color:var(--muted);font-size:.88rem;margin:4px 0 14px}
+.meta{display:flex;gap:18px;font-size:.82rem;color:var(--muted);border-top:1px solid #edf0ee;padding-top:14px}
+.note{margin-top:26px;font-size:.82rem;color:var(--muted);font-style:italic}
+
+/* Services */
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:26px}
+.service{background:#fff;padding:36px 30px;border-radius:6px;border-bottom:2px solid var(--gold);box-shadow:0 8px 28px rgba(6,26,23,.08)}
+.service .ico{font-size:2rem;margin-bottom:12px}
+.service h3{font-size:1.5rem;color:var(--emerald);margin-bottom:8px}
+.service p{color:var(--muted);font-size:.95rem}
+
+/* About */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.about-art{background:radial-gradient(circle,#14473f,#061a17);border-radius:6px;padding:60px;display:flex;justify-content:center;border:1px solid rgba(201,164,92,.35)}
+.about-art .logo-wrap{width:210px;height:210px;filter:drop-shadow(0 10px 30px rgba(0,0,0,.5))}
+.about ul{list-style:none;margin-top:20px}
+.about li{padding-left:30px;position:relative;margin:10px 0}
+.about li::before{content:"";position:absolute;left:0;top:.7em;width:16px;height:1px;background:var(--gold-grad)}
+
+/* Contact */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.info p{margin:14px 0;color:var(--muted)}
+.info b{color:var(--emerald)}
+form{display:grid;gap:14px}
+input,textarea,select{width:100%;padding:14px 16px;border:1px solid #d6ddd9;border-radius:3px;font:inherit;background:#fff}
+input:focus,textarea:focus,select:focus{outline:none;border-color:var(--gold)}
+footer{background:var(--deep);color:#a9b9b4;padding:44px 0;text-align:center;font-size:.88rem;border-top:1px solid rgba(201,164,92,.35)}
+footer .brand{justify-content:center;margin-bottom:14px}
+
+/* Modal */
+.modal{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(3,14,12,.78);backdrop-filter:blur(6px)}
+.modal.open{display:flex}
+.modal-panel{background:#fff;border-radius:8px;overflow:hidden;width:min(940px,100%);max-height:92vh;overflow-y:auto;display:grid;grid-template-columns:1.15fr 1fr}
+.modal-img{min-height:360px;background:linear-gradient(135deg,var(--emerald2),var(--deep));position:relative}
+.modal-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.modal-img img.broken{display:none}
+.modal-body{padding:38px 34px;display:flex;flex-direction:column;gap:6px}
+.modal-body h3{font-size:2rem;color:var(--emerald)}
+.modal-body .tagline{color:var(--gold-d);letter-spacing:3px;font-size:.7rem;text-transform:uppercase;font-weight:600}
+.modal-body dl{display:grid;grid-template-columns:auto 1fr;gap:8px 18px;margin:16px 0 22px;font-size:.92rem}
+.modal-body dt{color:var(--muted)}.modal-body dd{font-weight:500}
+.modal-close{position:absolute;top:14px;right:18px;z-index:3;background:rgba(6,26,23,.7);color:#fff;border:0;width:38px;height:38px;border-radius:50%;font-size:1.3rem;cursor:pointer}
+.modal-wrap{position:relative;width:min(940px,100%)}
+
+@media(max-width:900px){
+  .menu-btn{display:block}
+  nav ul{display:none;position:absolute;top:100%;left:0;right:0;background:var(--deep);flex-direction:column;padding:22px 5%;gap:18px}
+  nav ul.open{display:flex}
+  .hero{padding:110px 0 140px}
+  .hero-grid{grid-template-columns:1fr}
+  .hero-3d{height:320px}
+  .hero-lottie{width:96px;height:96px;top:-4%}.hero-lottie>div{width:72px;height:72px}
+  .scroll-hint{display:none}
+  .stats .grid{grid-template-columns:repeat(2,1fr);gap:22px}
+  .about,.contact{grid-template-columns:1fr;gap:40px}
+  .btn.ghost{margin:12px 0 0}
+  .modal-panel{grid-template-columns:1fr}
+  .modal-img{min-height:240px}
+  section{padding:80px 0}
+}
+@media(prefers-reduced-motion:reduce){
+  .grain,.ld-inner .logo-wrap,.scroll-hint i{animation:none}
+  .rv,.rv-img{opacity:1;transform:none;filter:none;clip-path:none;transition:none}
+}
+</style>
+<noscript><style>.rv,.rv-img{opacity:1!important;transform:none!important;filter:none!important;clip-path:none!important}.curtain,.ld-inner{display:none}</style></noscript>
+</head>
+<body>
+
+<!-- Shared logo symbol -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="vg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f3dfa6"/><stop offset=".5" stop-color="#c9a45c"/><stop offset="1" stop-color="#8f6b2a"/></linearGradient>
+    <radialGradient id="vbg" cx=".5" cy=".35" r=".8"><stop offset="0" stop-color="#14473f"/><stop offset="1" stop-color="#061a17"/></radialGradient>
+  </defs>
+  <symbol id="vel-logo" viewBox="0 0 80 80">
+    <circle cx="40" cy="40" r="39" fill="url(#vbg)"/>
+    <circle cx="40" cy="40" r="37" fill="none" stroke="url(#vg)" stroke-width="1.4"/>
+    <circle cx="40" cy="40" r="33.5" fill="none" stroke="url(#vg)" stroke-width=".5" opacity=".7"/>
+    <polygon points="19,25 27,25 40,47 53,25 61,25 44,59 36,59" fill="url(#vg)"/>
+    <path d="M40 9 C47 17 47 27 40 36 C33 27 33 17 40 9 Z" fill="url(#vg)"/>
+    <path d="M40 14 C43 19 43 25 40 31" fill="none" stroke="#061a17" stroke-width=".8" opacity=".5"/>
+    <line x1="40" y1="36" x2="40" y2="43" stroke="url(#vg)" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+</svg>
+
+<!-- Cinematic intro -->
+<div class="curtain top"></div><div class="curtain bottom"></div>
+<div class="ld-inner" id="loader">
+  <div class="logo-wrap"><svg class="logo" viewBox="0 0 80 80"><use href="#vel-logo"/></svg></div>
+  <b>VEL</b>
+  <div class="ld-bar"><i></i></div>
+</div>
+
+<header id="top">
+  <div class="container nav">
+    <a href="#home" class="brand">
+      <div class="logo-wrap"><svg class="logo" viewBox="0 0 80 80" role="img" aria-label="Vel Properties logo"><use href="#vel-logo"/></svg></div>
+      <div><b>VEL</b><small>Properties</small></div>
+    </a>
+    <button class="menu-btn" aria-label="Menu">&#9776;</button>
+    <nav><ul>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul></nav>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="home">
+  <!-- Parallax layers + cinematic Ken Burns -->
+  <div class="hero-bg mx" data-depth="14"><img data-fallback src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=80" alt="Luxury modern villa exterior"></div>
+  <div class="sky sky-1 mx" data-depth="26"><svg viewBox="0 0 1440 220" preserveAspectRatio="none"><path fill="#0a2622" fill-opacity=".72" d="M0 220V150h60v-40h50v60h40V90h60v80h50v-50h70v70h60V70h50v100h60v-60h80v80h50V100h60v90h50v-70h70v60h60V80h50v110h60v-50h70v80h60V120h60v100z"/></svg></div>
+  <div class="sky sky-2 mx" data-depth="48"><svg viewBox="0 0 1440 160" preserveAspectRatio="none"><path fill="#061a17" d="M0 160V110h90V70h60v50h70V90h80v60h70V60h70v90h90V100h70v50h80V80h60v80h90V110h70V70h60v90h90V120h70v40z"/></svg></div>
+  <div class="grain"></div>
+  <div class="bar-cine t"></div><div class="bar-cine b"></div>
+
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <p class="kicker">Real Estate Experts &middot; Coimbatore</p>
+      <h1 id="hero-title" aria-label="Find the place where your future takes root.">
+        <span class="w"><i>Find</i></span><span class="w"><i>the</i></span><span class="w"><i>place</i></span><span class="w"><i>where</i></span><span class="w"><i>your</i></span><span class="w gold"><i>future</i></span><span class="w"><i>takes</i></span><span class="w"><i>root.</i></span>
+      </h1>
+      <p class="sub">Vel Properties helps families and investors buy, sell and build with confidence: villas, apartments, plots and commercial spaces.</p>
+      <div class="cta"><a href="#projects" class="btn primary">View Projects</a><a href="#contact" class="btn ghost">Enquire Now</a></div>
+    </div>
+    <div class="hero-3d-wrap">
+      <div class="hero-3d" id="scene3d" aria-label="Interactive 3D model of a skyline"></div>
+      <div class="hero-lottie" title="Lottie animation"><div id="lottie-house"></div></div>
+      <div class="hero-3d-label">Drag &middot; Move your mouse</div>
+    </div>
+  </div>
+  <div class="scroll-hint"><span>Scroll</span><i></i></div>
+</section>
+
+<div class="container stats">
+  <div class="grid">
+    <div class="stat"><strong data-count="150" data-suffix="+">0</strong><span>Properties Listed</span></div>
+    <div class="stat"><strong data-count="80" data-suffix="+">0</strong><span>Happy Families</span></div>
+    <div class="stat"><strong data-count="10" data-suffix="+">0</strong><span>Years Experience</span></div>
+    <div class="stat"><strong data-count="25" data-suffix="+">0</strong><span>Ongoing Projects</span></div>
+  </div>
+</div>
+
+<!-- ================= PROJECTS ================= -->
+<section id="projects">
+  <div class="container">
+    <div class="sec-head rv">
+      <span class="kicker">Our Portfolio</span>
+      <h2>Featured Projects</h2>
+      <p class="lead">A selection of residential and commercial properties handled by Vel Properties. Tap any project for details.</p>
+    </div>
+
+    <div class="filters rv" style="--d:.1s">
+      <button class="active" data-filter="all">All</button>
+      <button data-filter="villa">Villas</button>
+      <button data-filter="apartment">Apartments</button>
+      <button data-filter="plot">Plots</button>
+      <button data-filter="commercial">Commercial</button>
+    </div>
+
+    <div class="cards">
+      <article class="pcard" data-type="villa" data-title="Green Park Villas" data-loc="Coimbatore, Tamil Nadu" data-kind="Premium Villa" data-size="3-4 BHK" data-area="2,400 sq.ft" data-extra="Private garden, gated community">
+        <div class="pcard-in"><div class="pimg"><span class="tag">Villa</span><span class="view">View details &rarr;</span><img data-fallback loading="lazy" src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1000&q=80" alt="Green Park Villas"></div>
+        <div class="pbody"><h3>Green Park Villas</h3><p class="loc">Coimbatore, Tamil Nadu</p><div class="meta"><span>3-4 BHK</span><span>2,400 sq.ft</span></div></div></div>
+      </article>
+
+      <article class="pcard" data-type="apartment" data-title="Vel Heights" data-loc="Singanallur, Coimbatore" data-kind="Luxury Apartments" data-size="2-3 BHK" data-area="1,150 sq.ft" data-extra="Clubhouse, gym, covered parking">
+        <div class="pcard-in"><div class="pimg"><span class="tag">Apartment</span><span class="view">View details &rarr;</span><img data-fallback loading="lazy" src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1000&q=80" alt="Vel Heights apartments"></div>
+        <div class="pbody"><h3>Vel Heights</h3><p class="loc">Singanallur, Coimbatore</p><div class="meta"><span>2-3 BHK</span><span>1,150 sq.ft</span></div></div></div>
+      </article>
+
+      <article class="pcard" data-type="villa" data-title="Lotus Grove Villas" data-loc="Saravanampatti, Coimbatore" data-kind="Contemporary Villa" data-size="4 BHK" data-area="3,200 sq.ft" data-extra="Home theatre, terrace lounge">
+        <div class="pcard-in"><div class="pimg"><span class="tag">Villa</span><span class="view">View details &rarr;</span><img data-fallback loading="lazy" src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1000&q=80" alt="Lotus Grove Villas"></div>
+        <div class="pbody"><h3>Lotus Grove Villas</h3><p class="loc">Saravanampatti, Coimbatore</p><div class="meta"><span>4 BHK</span><span>3,200 sq.ft</span></div></div></div>
+      </article>
+
+      <article class="pcard" data-type="plot" data-title="Sri Vel Nagar Plots" data-loc="Pollachi Road, Coimbatore" data-kind="Residential Plots" data-size="DTCP Approved" data-area="1,200-2,400 sq.ft" data-extra="Tar roads, water and power connections">
+        <div class="pcard-in"><div class="pimg"><span class="tag">Plot</span><span class="view">View details &rarr;</span><img data-fallback loading="lazy" src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1000&q=80" alt="Sri Vel Nagar open plots"></div>
+        <div class="pbody"><h3>Sri Vel Nagar Plots</h3><p class="loc">Pollachi Road, Coimbatore</p><div class="meta"><span>DTCP Approved</span><span>1,200-2,400 sq.ft</span></div></div></div>
+      </article>
+
+      <article class="pcard" data-type="commercial" data-title="Vel Business Square" data-loc="Avinashi Road, Coimbatore" data-kind="Commercial Complex" data-size="Shops & Offices" data-area="400-3,000 sq.ft" data-extra="Prime frontage, ample parking">
+        <div class="pcard-in"><div class="pimg"><span class="tag">Commercial</span><span class="view">View details &rarr;</span><img data-fallback loading="lazy" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=80" alt="Vel Business Square"></div>
+        <div class="pbody"><h3>Vel Business Square</h3><p class="loc">Avinashi Road, Coimbatore</p><div class="meta"><span>Shops &amp; Offices</span><span>400-3,000 sq.ft</span></div></div></div>
+      </article>
+
+      <article class="pcard" data-type="villa" data-title="Palm Residency" data-loc="Race Course, Coimbatore" data-kind="Pool Villa" data-size="3 BHK" data-area="2,800 sq.ft" data-extra="Private pool, landscaped lawn">
+        <div class="pcard-in"><div class="pimg"><span class="tag">Villa</span><span class="view">View details &rarr;</span><img data-fallback loading="lazy" src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1000&q=80" alt="Palm Residency pool villa"></div>
+        <div class="pbody"><h3>Palm Residency</h3><p class="loc">Race Course, Coimbatore</p><div class="meta"><span>3 BHK</span><span>2,800 sq.ft</span></div></div></div>
+      </article>
+    </div>
+    <p class="note">Sample projects and stock photos for demonstration. Replace names, details and images with Vel Properties' real projects.</p>
+  </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section class="alt" id="services">
+  <div class="container">
+    <div class="sec-head rv"><span class="kicker">What We Do</span><h2>Our Services</h2></div>
+    <div class="services">
+      <div class="service"><div class="ico">&#127969;</div><h3>Buy &amp; Sell</h3><p>Verified listings and honest guidance for every purchase or sale.</p></div>
+      <div class="service"><div class="ico">&#128196;</div><h3>Legal &amp; Documentation</h3><p>Title checks, approvals and registration support from start to finish.</p></div>
+      <div class="service"><div class="ico">&#127959;</div><h3>Construction</h3><p>Quality construction for villas, apartments and commercial buildings.</p></div>
+      <div class="service"><div class="ico">&#128200;</div><h3>Investment Advice</h3><p>Land and property investment advice based on location and growth.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section id="about">
+  <div class="container about">
+    <div class="about-art rv-img"><div class="logo-wrap"><svg class="logo" viewBox="0 0 80 80"><use href="#vel-logo"/></svg></div></div>
+    <div class="rv" style="--d:.15s">
+      <span class="kicker">About Us</span>
+      <h2>Built on trust, rooted in Tamil Nadu</h2>
+      <p class="lead">Vel Properties is a local real estate company focused on transparent dealings and long-term relationships with every client.</p>
+      <ul>
+        <li>Clear titles and approved layouts</li>
+        <li>Transparent pricing, no hidden charges</li>
+        <li>Support from site visit to registration</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="alt" id="contact">
+  <div class="container contact">
+    <div class="info rv">
+      <span class="kicker">Get In Touch</span>
+      <h2>Let's find your property</h2>
+      <p><b>Phone:</b> +91 00000 00000</p>
+      <p><b>Email:</b> info@velproperties.example</p>
+      <p><b>Address:</b> Your office address, Coimbatore, Tamil Nadu</p>
+    </div>
+    <form id="enquiry" class="rv" style="--d:.15s">
+      <input name="name" placeholder="Your name" required>
+      <input name="phone" type="tel" placeholder="Phone number" required>
+      <select name="interest"><option>Villa</option><option>Apartment</option><option>Plot</option><option>Commercial</option></select>
+      <textarea name="message" rows="4" placeholder="Tell us what you need"></textarea>
+      <button class="btn primary" type="submit">Send Enquiry</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="brand"><div class="logo-wrap" style="width:42px;height:42px"><svg class="logo" viewBox="0 0 80 80"><use href="#vel-logo"/></svg></div><div><b>VEL</b><small>Properties</small></div></div>
+  <p>&copy; <span id="year"></span> Vel Properties. All rights reserved.</p>
+</footer>
+
+<!-- Project detail modal -->
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="modal-wrap">
+    <button class="modal-close" aria-label="Close">&times;</button>
+    <div class="modal-panel" id="modal-panel">
+      <div class="modal-img"><img data-fallback id="m-img" src="" alt=""></div>
+      <div class="modal-body">
+        <span class="tagline" id="m-kind"></span>
+        <h3 id="m-title"></h3>
+        <p class="loc" id="m-loc"></p>
+        <dl>
+          <dt>Type</dt><dd id="m-size"></dd>
+          <dt>Area</dt><dd id="m-area"></dd>
+          <dt>Highlights</dt><dd id="m-extra"></dd>
+        </dl>
+        <a href="#contact" class="btn primary" id="m-cta" style="text-align:center">Enquire About This</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Animation libraries -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/motion@11/dist/motion.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1/dist/lenis.min.js"></script>
+
+<script>
+/* ==========================================================
+   Vel Properties - animation map
+   1. Parallax ........ GSAP ScrollTrigger (scroll) + mouse depth layers
+   2. GSAP ............ intro timeline, split-word title, counters, card entrances
+   3. Framer Motion ... "Motion" library (Framer Motion's engine for plain HTML):
+                        springs on stats, services, buttons, project modal
+   4. Lottie .......... animated house badge in hero (lottie-web, inline JSON)
+   5. Cinematic ....... curtain intro, Ken Burns zoom, letterbox bars, grain, vignette
+   6. 3D .............. Three.js rotating skyline + CSS 3D tilt on project cards
+   7. Smooth reveal ... blur/slide/clip-path reveals + Lenis smooth scrolling
+   ========================================================== */
+(function () {
+  document.documentElement.classList.remove('no-js');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var $ = function (s, c) { return (c || document).querySelector(s); };
+  var $$ = function (s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
+
+  /* ---------- basics ---------- */
+  $('#year').textContent = new Date().getFullYear();
+  var header = $('#top');
+  function onScrollHeader() { header.classList.toggle('scrolled', window.scrollY > 60); }
+  window.addEventListener('scroll', onScrollHeader, { passive: true }); onScrollHeader();
+
+  var menuBtn = $('.menu-btn'), menu = $('nav ul');
+  menuBtn.addEventListener('click', function () { menu.classList.toggle('open'); });
+  $$('nav a').forEach(function (a) { a.addEventListener('click', function () { menu.classList.remove('open'); }); });
+
+  // image fallbacks (if a photo fails to load, the gradient behind it shows)
+  $$('img[data-fallback]').forEach(function (img) {
+    img.addEventListener('error', function () { img.classList.add('broken'); });
+    if (img.complete && img.naturalWidth === 0 && img.getAttribute('src')) img.classList.add('broken');
+  });
+
+  /* ---------- 7. Smooth reveal (IntersectionObserver) ---------- */
+  var revealEls = $$('.rv, .rv-img');
+  if ('IntersectionObserver' in window && !reduce) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+    revealEls.forEach(function (el) { io.observe(el); });
+  } else { revealEls.forEach(function (el) { el.classList.add('in'); }); }
+
+  /* ---------- Project filter ---------- */
+  var cards = $$('.pcard');
+  $$('.filters button').forEach(function (b) {
+    b.addEventListener('click', function () {
+      $$('.filters button').forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      var f = b.dataset.filter, shown = [];
+      cards.forEach(function (c) {
+        var ok = f === 'all' || c.dataset.type === f;
+        c.style.display = ok ? '' : 'none';
+        if (ok) shown.push(c);
+      });
+      if (window.gsap) gsap.fromTo(shown, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: .7, stagger: .08, ease: 'power3.out', overwrite: 'auto' });
+      if (window.ScrollTrigger) setTimeout(function () { ScrollTrigger.refresh(); }, 50);
+    });
+  });
+
+  /* ---------- 6. CSS 3D tilt on project cards ---------- */
+  if (!reduce && window.matchMedia('(hover: hover)').matches) {
+    cards.forEach(function (c) {
+      var inner = $('.pcard-in', c);
+      c.addEventListener('mousemove', function (e) {
+        var r = c.getBoundingClientRect(), px = (e.clientX - r.left) / r.width - .5, py = (e.clientY - r.top) / r.height - .5;
+        inner.style.transition = 'box-shadow .4s';
+        inner.style.transform = 'rotateY(' + (px * 9) + 'deg) rotateX(' + (-py * 9) + 'deg) translateZ(8px)';
+      });
+      c.addEventListener('mouseleave', function () {
+        inner.style.transition = 'transform .6s cubic-bezier(.2,.7,.2,1), box-shadow .4s';
+        inner.style.transform = '';
+      });
+    });
+  }
+
+  /* ---------- Modal (spring via Motion when available) ---------- */
+  var modal = $('#modal'), panel = $('#modal-panel'), lastFocus = null;
+  function openModal(c) {
+    var img = $('img', c);
+    $('#m-img').classList.remove('broken');
+    $('#m-img').src = img ? img.src.replace('w=1000', 'w=1400') : '';
+    $('#m-img').alt = c.dataset.title;
+    $('#m-kind').textContent = c.dataset.kind;
+    $('#m-title').textContent = c.dataset.title;
+    $('#m-loc').textContent = c.dataset.loc;
+    $('#m-size').textContent = c.dataset.size;
+    $('#m-area').textContent = c.dataset.area;
+    $('#m-extra').textContent = c.dataset.extra;
+    lastFocus = document.activeElement;
+    modal.classList.add('open'); modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    if (window.__lenis) window.__lenis.stop();
+    try {
+      if (window.Motion && Motion.animate && !reduce) {
+        Motion.animate(modal, { opacity: [0, 1] }, { duration: .3 });
+        Motion.animate(panel, { opacity: [0, 1], y: [50, 0], scale: [.94, 1] }, { type: 'spring', stiffness: 220, damping: 22 });
+      }
+    } catch (e) {}
+    $('.modal-close').focus();
+  }
+  function closeModal() {
+    modal.classList.remove('open'); modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    if (window.__lenis) window.__lenis.start();
+    if (lastFocus) lastFocus.focus();
+  }
+  cards.forEach(function (c) { c.addEventListener('click', function () { openModal(c); }); });
+  $('.modal-close').addEventListener('click', closeModal);
+  modal.addEventListener('click', function (e) { if (e.target === modal) closeModal(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && modal.classList.contains('open')) closeModal(); });
+  $('#m-cta').addEventListener('click', closeModal);
+
+  /* ---------- Contact form (opens visitor's mail app) ---------- */
+  $('#enquiry').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var d = new FormData(e.target);
+    var body = 'Name: ' + d.get('name') + '%0D%0APhone: ' + d.get('phone') + '%0D%0AInterest: ' + d.get('interest') + '%0D%0A%0D%0A' + encodeURIComponent(d.get('message') || '');
+    window.location.href = 'mailto:info@velproperties.example?subject=Enquiry from website&body=' + body;
+  });
+
+  /* ---------- 4. Lottie house badge (inline animation data) ---------- */
+  function lottieData() {
+    var gold = [0.788, 0.643, 0.361, 1], ivory = [0.97, 0.953, 0.918, 1], dark = [0.039, 0.149, 0.133, 1];
+    var lin = { x: [0.5, 0.5, 0.5], y: [0.5, 0.5, 0.5] };
+    var st = function (c, w, d) { var o = { ty: 'st', c: { a: 0, k: c }, o: { a: 0, k: 100 }, w: { a: 0, k: w }, lc: 2, lj: 2 }; if (d) o.d = d; return o; };
+    var fl = function (c) { return { ty: 'fl', c: { a: 0, k: c }, o: { a: 0, k: 100 }, r: 1 }; };
+    var tr = { ty: 'tr', p: { a: 0, k: [0, 0] }, a: { a: 0, k: [0, 0] }, s: { a: 0, k: [100, 100] }, r: { a: 0, k: 0 }, o: { a: 0, k: 100 } };
+    var grp = function (items, nm) { return { ty: 'gr', it: items.concat([tr]), nm: nm }; };
+    var base = function (ind, nm, ks, shapes) {
+      return { ddd: 0, ind: ind, ty: 4, nm: nm, sr: 1, ks: ks, ao: 0, shapes: shapes, ip: 0, op: 90, st: 0, bm: 0 };
+    };
+    var ksStatic = function (p, o) { return { o: { a: 0, k: o == null ? 100 : o }, r: { a: 0, k: 0 }, p: { a: 0, k: p }, a: { a: 0, k: [0, 0, 0] }, s: { a: 0, k: [100, 100, 100] } }; };
+    // rotating dashed ring
+    var ringKs = ksStatic([100, 100, 0]);
+    ringKs.r = { a: 1, k: [{ t: 0, s: [0], i: { x: [0.5], y: [0.5] }, o: { x: [0.5], y: [0.5] } }, { t: 90, s: [360] }] };
+    var ring = base(1, 'ring', ringKs, [grp([{ ty: 'el', d: 1, s: { a: 0, k: [176, 176] }, p: { a: 0, k: [0, 0] } }, st(gold, 3, [{ n: 'd', nm: 'dash', v: { a: 0, k: 10 } }, { n: 'g', nm: 'gap', v: { a: 0, k: 9 } }, { n: 'o', nm: 'offset', v: { a: 0, k: 0 } }])], 'ring')]);
+    // breathing house
+    var houseKs = ksStatic([100, 108, 0]);
+    houseKs.s = { a: 1, k: [
+      { t: 0, s: [92, 92, 100], i: lin, o: lin },
+      { t: 45, s: [104, 104, 100], i: lin, o: lin },
+      { t: 90, s: [92, 92, 100] }
+    ] };
+    var path = function (v) { return { ty: 'sh', ks: { a: 0, k: { i: v.map(function () { return [0, 0]; }), o: v.map(function () { return [0, 0]; }), v: v, c: true } } }; };
+    var rc = function (s, p, r) { return { ty: 'rc', d: 1, s: { a: 0, k: s }, p: { a: 0, k: p }, r: { a: 0, k: r } }; };
+    var house = base(2, 'house', houseKs, [
+      grp([rc([70, 46], [0, 22], 3), fl(ivory)], 'body'),
+      grp([path([[-50, -2], [0, -44], [50, -2]]), fl(gold)], 'roof'),
+      grp([rc([15, 26], [0, 31], 2), fl(dark)], 'door'),
+      grp([rc([12, 12], [-22, 16], 1), fl(gold)], 'win1'),
+      grp([rc([12, 12], [22, 16], 1), fl(gold)], 'win2')
+    ]);
+    // twinkling spark
+    var sparkKs = ksStatic([150, 44, 0]);
+    sparkKs.o = { a: 1, k: [{ t: 0, s: [0], i: { x: [0.5], y: [0.5] }, o: { x: [0.5], y: [0.5] } }, { t: 30, s: [100], i: { x: [0.5], y: [0.5] }, o: { x: [0.5], y: [0.5] } }, { t: 60, s: [0], i: { x: [0.5], y: [0.5] }, o: { x: [0.5], y: [0.5] } }, { t: 90, s: [0] }] };
+    var spark = base(3, 'spark', sparkKs, [grp([{ ty: 'el', d: 1, s: { a: 0, k: [9, 9] }, p: { a: 0, k: [0, 0] } }, fl([0.953, 0.875, 0.651, 1])], 'dot')]);
+    return { v: '5.7.4', fr: 30, ip: 0, op: 90, w: 200, h: 200, nm: 'vel-house', ddd: 0, assets: [], layers: [spark, house, ring] };
+  }
+  function initLottie() {
+    if (!window.lottie) return;
+    try {
+      lottie.loadAnimation({ container: $('#lottie-house'), renderer: 'svg', loop: true, autoplay: true, animationData: lottieData() });
+    } catch (e) { console.warn('Lottie failed', e); }
+  }
+
+  /* ---------- 6. Three.js 3D skyline ---------- */
+  function init3D() {
+    if (!window.THREE) return;
+    var wrap = $('#scene3d');
+    var renderer;
+    try { renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true }); } catch (e) { return; }
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+    wrap.appendChild(renderer.domElement);
+    var scene = new THREE.Scene();
+    var camera = new THREE.PerspectiveCamera(38, 1, 0.1, 100);
+    var group = new THREE.Group(); scene.add(group);
+    var GOLD = 0xc9a45c;
+    var lineMat = new THREE.LineBasicMaterial({ color: GOLD });
+    var fillMat = new THREE.MeshBasicMaterial({ color: 0x0f3a33, transparent: true, opacity: 0.82 });
+    var fillMat2 = new THREE.MeshBasicMaterial({ color: 0x14473f, transparent: true, opacity: 0.9 });
+    function add(geo, x, y, z, mat) {
+      var m = new THREE.Mesh(geo, mat || fillMat); m.position.set(x, y, z);
+      var l = new THREE.LineSegments(new THREE.EdgesGeometry(geo), lineMat); l.position.copy(m.position);
+      group.add(m, l); return m;
+    }
+    var seed = 11; function rnd() { seed = (seed * 16807) % 2147483647; return seed / 2147483647; }
+    for (var gx = -2; gx <= 2; gx++) {
+      for (var gz = -2; gz <= 2; gz++) {
+        if (gx === 0 && gz === 0) continue;
+        if (gx >= 1 && gz >= 1) continue;               // leave a plot for the villa
+        var h = 0.8 + rnd() * 2.4 + (3 - Math.abs(gx) - Math.abs(gz)) * 0.25;
+        var w = 0.9 + rnd() * 0.3;
+        add(new THREE.BoxGeometry(w, h, w), gx * 1.7, h / 2, gz * 1.7, fillMat);
+      }
+    }
+    add(new THREE.BoxGeometry(1.3, 4.8, 1.3), 0, 2.4, 0, fillMat2);          // central tower
+    add(new THREE.BoxGeometry(0.5, 0.9, 0.5), 0, 5.25, 0, fillMat2);         // crown
+    // little villa with pitched roof
+    add(new THREE.BoxGeometry(1.5, 0.9, 1.5), 2.55, 0.45, 2.55, fillMat2);
+    var roof = add(new THREE.ConeGeometry(1.3, 0.8, 4), 2.55, 1.3, 2.55, fillMat2); roof.rotation.y = Math.PI / 4;
+    group.children.forEach(function (c) { if (c.geometry && c.geometry.type === 'ConeGeometry') c.rotation.y = Math.PI / 4; });
+    var grid = new THREE.GridHelper(15, 15, GOLD, 0x1c5a50);
+    grid.material.transparent = true; grid.material.opacity = 0.45; scene.add(grid);
+
+    var tx = 0, ty = 0, cx = 0, cy = 0, dragging = false, lastX = 0, spin = 0;
+    var zoomed = false;
+    function size() {
+      var w = wrap.clientWidth, h = wrap.clientHeight;
+      renderer.setSize(w, h, false); camera.aspect = w / h; camera.updateProjectionMatrix();
+    }
+    size();
+    if (window.ResizeObserver) new ResizeObserver(size).observe(wrap); else window.addEventListener('resize', size);
+    window.addEventListener('mousemove', function (e) {
+      tx = (e.clientX / window.innerWidth - 0.5) * 2; ty = (e.clientY / window.innerHeight - 0.5) * 2;
+    });
+    wrap.addEventListener('pointerdown', function (e) { dragging = true; lastX = e.clientX; wrap.style.cursor = 'grabbing'; });
+    window.addEventListener('pointerup', function () { dragging = false; wrap.style.cursor = 'grab'; });
+    window.addEventListener('pointermove', function (e) { if (dragging) { spin += (e.clientX - lastX) * 0.012; lastX = e.clientX; } });
+
+    var visible = true;
+    if ('IntersectionObserver' in window) new IntersectionObserver(function (en) { visible = en[0].isIntersecting; }).observe(wrap);
+    var t0 = performance.now();
+    function frame(now) {
+      requestAnimationFrame(frame);
+      if (!visible) return;
+      var t = (now - t0) / 1000;
+      cx += (tx - cx) * 0.05; cy += (ty - cy) * 0.05;
+      group.rotation.y = (reduce ? 0.6 : t * 0.22) + spin;
+      grid.rotation.y = group.rotation.y;
+      var r = 15.5;
+      camera.position.set(cx * 2.2 + 0.5, 7.4 - cy * 1.6, r);
+      camera.lookAt(0, 1.8, 0);
+      renderer.render(scene, camera);
+    }
+    requestAnimationFrame(frame);
+  }
+
+  /* ---------- 3. Framer Motion (Motion library) ---------- */
+  function initMotion() {
+    var M = window.Motion;
+    if (!M || !M.animate || !M.inView || reduce) return;
+    try {
+      var spring = { type: 'spring', stiffness: 150, damping: 17 };
+      var stats = $$('.stat'), services = $$('.service');
+      stats.concat(services).forEach(function (el) { el.style.opacity = 0; });
+      stats.forEach(function (el, i) { M.inView(el, function () { M.animate(el, { opacity: [0, 1], y: [50, 0], scale: [.88, 1] }, Object.assign({ delay: i * 0.1 }, spring)); }, { margin: '0px 0px -8% 0px' }); });
+      services.forEach(function (el, i) { M.inView(el, function () { M.animate(el, { opacity: [0, 1], y: [60, 0], rotateX: [-12, 0] }, Object.assign({ delay: i * 0.12 }, spring)); }, { margin: '0px 0px -8% 0px' }); });
+      if (M.hover) M.hover('.btn, .service', function (el) {
+        M.animate(el, { scale: 1.04, y: -3 }, { type: 'spring', stiffness: 320, damping: 18 });
+        return function () { M.animate(el, { scale: 1, y: 0 }, { type: 'spring', stiffness: 320, damping: 20 }); };
+      });
+      if (M.press) M.press('.btn', function (el) {
+        M.animate(el, { scale: .95 }, { duration: .12 });
+        return function () { M.animate(el, { scale: 1.04 }, { type: 'spring', stiffness: 320, damping: 14 }); };
+      });
+    } catch (e) { console.warn('Motion failed', e); $$('.stat,.service').forEach(function (el) { el.style.opacity = 1; }); }
+  }
+
+  /* ---------- 1/2/5/7. GSAP, parallax, cinematic intro, Lenis ---------- */
+  function finishLoader() {
+    $$('.curtain, #loader').forEach(function (n) { n.style.display = 'none'; });
+    document.body.style.overflow = '';
+  }
+  function initGSAP() {
+    if (!window.gsap) { finishLoader(); return; }
+    gsap.registerPlugin(window.ScrollTrigger);
+
+    // 7. Lenis smooth scrolling
+    if (window.Lenis && !reduce) {
+      var lenis = new Lenis({ duration: 1.15, easing: function (t) { return Math.min(1, 1.001 - Math.pow(2, -10 * t)); } });
+      window.__lenis = lenis;
+      lenis.on('scroll', ScrollTrigger.update);
+      gsap.ticker.add(function (t) { lenis.raf(t * 1000); });
+      gsap.ticker.lagSmoothing(0);
+      $$('a[href^="#"]').forEach(function (a) {
+        a.addEventListener('click', function (e) {
+          var id = a.getAttribute('href'); if (id.length < 2) return;
+          var el = $(id); if (!el) return; e.preventDefault();
+          lenis.scrollTo(el, { offset: id === '#home' ? 0 : -60, duration: 1.4 });
+        });
+      });
+    }
+
+    // 5. Cinematic intro: logo pulse -> curtains open -> Ken Burns -> staggered hero reveal
+    if (reduce) { finishLoader(); }
+    else {
+      document.body.style.overflow = 'hidden';
+      gsap.set('#hero-title .w i', { yPercent: 115, rotate: 5 });
+      gsap.set(['.hero .kicker', '.hero .sub', '.hero .cta > *'], { opacity: 0, y: 26 });
+      gsap.set('.hero-3d', { opacity: 0, scale: .88 });
+      gsap.set('.hero-lottie', { scale: 0 });
+      gsap.set('.scroll-hint', { opacity: 0 });
+      gsap.set('.bar-cine.t', { yPercent: -100 }); gsap.set('.bar-cine.b', { yPercent: 100 });
+      gsap.set('header', { yPercent: -110 });
+      var tl = gsap.timeline({ defaults: { ease: 'power3.out' }, onComplete: finishLoader });
+      tl.to('.ld-bar i', { scaleX: 1, duration: 1.2, ease: 'power2.inOut' })
+        .to('.ld-inner', { opacity: 0, scale: 1.08, duration: .6 }, '+=.1')
+        .addLabel('open')
+        .to('.curtain.top', { yPercent: -100, duration: 1.4, ease: 'power4.inOut' }, 'open')
+        .to('.curtain.bottom', { yPercent: 100, duration: 1.4, ease: 'power4.inOut' }, 'open')
+        .fromTo('.hero-bg img', { scale: 1.4 }, { scale: 1.06, duration: 4.5, ease: 'power2.out' }, 'open')
+        .to('.bar-cine.t, .bar-cine.b', { yPercent: 0, duration: 1.1, ease: 'power3.inOut' }, 'open+=.4')
+        .to('.hero .kicker', { opacity: 1, y: 0, duration: .9 }, 'open+=.9')
+        .to('#hero-title .w i', { yPercent: 0, rotate: 0, duration: 1.1, stagger: .09 }, 'open+=1')
+        .to('.hero .sub', { opacity: 1, y: 0, duration: .9 }, 'open+=1.6')
+        .to('.hero .cta > *', { opacity: 1, y: 0, duration: .8, stagger: .12 }, 'open+=1.8')
+        .to('.hero-3d', { opacity: 1, scale: 1, duration: 1.5, ease: 'power3.out' }, 'open+=1.1')
+        .to('.hero-lottie', { scale: 1, duration: .9, ease: 'back.out(2.2)' }, 'open+=2')
+        .to('header', { yPercent: 0, duration: .9 }, 'open+=1.2')
+        .to('.scroll-hint', { opacity: 1, duration: 1 }, 'open+=2.4');
+      // settle the cinematic bars to thin after intro
+      tl.to('.bar-cine', { height: '2.2vh', duration: 1.2, ease: 'power2.inOut' }, '+=.6');
+    }
+
+    // 1. Parallax: scroll depth (GSAP ScrollTrigger)
+    if (!reduce && window.ScrollTrigger) {
+      var heroST = { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true };
+      gsap.to('.hero-bg', { yPercent: 24, ease: 'none', scrollTrigger: heroST });
+      gsap.to('.sky-1', { yPercent: 14, ease: 'none', scrollTrigger: heroST });
+      gsap.to('.sky-2', { yPercent: 30, ease: 'none', scrollTrigger: heroST });
+      gsap.to('.hero-copy', { y: -70, opacity: .15, ease: 'none', scrollTrigger: heroST });
+      gsap.to('.hero-3d-wrap', { y: -40, ease: 'none', scrollTrigger: heroST });
+
+      // parallax inside project images
+      $$('.pimg').forEach(function (box) {
+        var im = $('img', box);
+        gsap.fromTo(im, { yPercent: -6 }, { yPercent: 6, ease: 'none', scrollTrigger: { trigger: box, start: 'top bottom', end: 'bottom top', scrub: true } });
+      });
+
+      // 2. GSAP: project cards entrance
+      gsap.set('.pcard', { opacity: 0 });
+      ScrollTrigger.batch('.pcard', {
+        start: 'top 90%', once: true,
+        onEnter: function (batch) {
+          gsap.fromTo(batch, { y: 80, opacity: 0, scale: .94 }, { y: 0, opacity: 1, scale: 1, duration: 1.1, stagger: .14, ease: 'power3.out' });
+          batch.forEach(function (c) { gsap.fromTo($('.pimg', c), { clipPath: 'inset(0 0 100% 0)' }, { clipPath: 'inset(0 0 0% 0)', duration: 1.3, ease: 'power4.inOut' }); });
+        }
+      });
+
+      // GSAP counters
+      $$('[data-count]').forEach(function (el) {
+        ScrollTrigger.create({
+          trigger: el, start: 'top 92%', once: true,
+          onEnter: function () {
+            var o = { v: 0 };
+            gsap.to(o, { v: +el.dataset.count, duration: 2.2, ease: 'power2.out', onUpdate: function () { el.textContent = Math.round(o.v) + (el.dataset.suffix || ''); } });
+          }
+        });
+      });
+    } else {
+      $$('[data-count]').forEach(function (el) { el.textContent = el.dataset.count + (el.dataset.suffix || ''); });
+    }
+
+    // 1. Parallax: mouse depth layers
+    if (!reduce && window.matchMedia('(hover: hover)').matches) {
+      var layers = $$('.mx').map(function (el) {
+        return { x: gsap.quickTo(el, 'x', { duration: 1.2, ease: 'power3.out' }), y: gsap.quickTo(el, 'y', { duration: 1.2, ease: 'power3.out' }), d: +el.dataset.depth };
+      });
+      window.addEventListener('mousemove', function (e) {
+        var nx = e.clientX / window.innerWidth - .5, ny = e.clientY / window.innerHeight - .5;
+        layers.forEach(function (l) { l.x(-nx * l.d); l.y(-ny * l.d * .5); });
+      });
+    }
+  }
+
+  /* ---------- boot ---------- */
+  function boot() {
+    try { initGSAP(); } catch (e) { console.warn('GSAP init failed', e); finishLoader(); }
+    try { initMotion(); } catch (e) { console.warn(e); }
+    try { initLottie(); } catch (e) { console.warn(e); }
+    try { init3D(); } catch (e) { console.warn(e); }
+  }
+  if (document.readyState === 'complete') boot(); else window.addEventListener('load', boot);
+  // fail-safe: never leave the visitor stuck on the intro screen
+  setTimeout(function () { if ($('#loader') && $('#loader').style.display !== 'none' && !window.gsap) finishLoader(); }, 6000);
+  setTimeout(function () { var l = $('#loader'); if (l && getComputedStyle(l).opacity === '1' && !window.gsap) finishLoader(); }, 8000);
+})();
+</script>
+</body>
+</html>
